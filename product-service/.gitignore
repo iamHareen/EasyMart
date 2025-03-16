@@ -1,10 +1,12 @@
-HELP.md
+# Ignore target directories (Maven build output)
 target/
-!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# Allow Maven wrapper JAR to be tracked
+!.mvn/wrapper/maven-wrapper.jar
+
+### Spring Tool Suite (STS) ###
 .apt_generated
 .classpath
 .factorypath
@@ -14,7 +16,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -31,3 +33,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore database storage (but allow init.sql file)
+mysql/
+!docker/mysql/init.sql
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
